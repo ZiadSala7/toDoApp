@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:to_do_app/view/widgets/custom_note_item.dart';
+import 'package:flutter/widgets.dart';
+import 'package:to_do_app/widgets/list_view_builder.dart';
 
 class NotesViewBody extends StatelessWidget {
   const NotesViewBody({super.key});
@@ -8,10 +9,7 @@ class NotesViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView(
       children: const [
-        CustomNoteItem(
-          noteName: 'Flutter',
-          subTitle: 'hello, its my app , have a nice day',
-        ),
+        NotesListViewBuilder(),
       ],
     );
   }
